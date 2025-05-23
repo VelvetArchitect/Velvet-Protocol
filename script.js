@@ -1,8 +1,6 @@
-const collapsibles = document.querySelectorAll(".collapsible");
-collapsibles.forEach(btn => {
-    btn.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-    });
+document.querySelectorAll('.collapsible h2').forEach(header => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
 });
