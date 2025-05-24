@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thread 00 – Velvet Protocol</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <article id="content" style="max-width: 720px; margin: 0 auto; padding: 2rem; line-height: 1.6;">
+    Loading thread...
+  </article>
 
+  <script>
+    fetch('thread-00-curated.md')
+      .then(response => response.text())
+      .then(markdown => {
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+      });
+  </script>
+</body>
+</html>
