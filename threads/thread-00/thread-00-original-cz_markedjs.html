@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thread 00 – Originál (CZ)</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <article id="content" style="max-width: 720px; margin: 0 auto; padding: 2rem; line-height: 1.6;">
+    Načítání vlákna...
+  </article>
 
+  <script>
+    fetch('./thread-00-original-cz.md')
+      .then(response => {
+        if (!response.ok) throw new Error("Soubor nelze načíst.");
+        return response.text();
+      })
+      .then(markdown => {
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+      })
+      .catch(error => {
+        document.getElementById('content').innerHTML = `<p style="color:red;">Chyba načítání: ${error.message}</p>`;
+      });
+  </script>
+</body>
+</html>
