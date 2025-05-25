@@ -1,8 +1,18 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   background-color: #0b0b0e;
   color: #e0e0f0;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Outfit', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #b99dfc;
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
 }
 
 .logo-bar {
@@ -23,8 +33,7 @@ body {
 
 .title {
   font-size: 18px;
-  color: #b99dfc;
-  font-weight: 600;
+  /* font-family, font-weight a color už je v h1, h2, ... */
 }
 
 nav ul {
@@ -39,10 +48,13 @@ nav ul li a {
   color: #a48bff;
   text-decoration: none;
   font-weight: bold;
+  font-family: 'Outfit', 'Montserrat', Arial, sans-serif;
+  transition: color 0.2s;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #e0e0f0;
 }
 
 #intro {
@@ -90,9 +102,24 @@ nav ul li a:hover {
   padding: 0.5rem;
   margin: 0.5rem 0;
   border-radius: 5px;
+  font-family: 'Outfit', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: #b99dfc;
 }
 
 .collapsible .content {
   display: none;
   padding-left: 1rem;
+}
+
+.collapsible.active .content {
+  display: block;
+}
+
+ul, li {
+  font-family: inherit;
+}
+
+a {
+  font-family: inherit;
 }
