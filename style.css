@@ -123,3 +123,16 @@ ul, li {
 a {
   font-family: inherit;
 }
+.collapsible.active h2,
+.collapsible h2:focus,
+.collapsible h2:hover {
+  background: #28283b;
+  color: #ffe484;
+  box-shadow: 0 2px 10px 0 #130e2c33;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.collapsible {
+  border-bottom: 1px solid #241b3c;
+  margin-bottom: 1.2em;
+  padding-bottom: 0.8em;
+  }
