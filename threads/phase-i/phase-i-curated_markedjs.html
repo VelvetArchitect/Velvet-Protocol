@@ -16,6 +16,9 @@
       .then(response => response.text())
       .then(md => {
         document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(error => {
+        document.getElementById('content').innerHTML = "Nepodařilo se načíst obsah: " + error;
       });
   </script>
 </body>
