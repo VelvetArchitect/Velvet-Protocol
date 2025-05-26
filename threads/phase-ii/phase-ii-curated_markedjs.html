@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phase II: Curated Transcript (Velvet Protocol XIII)</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <main>
+    <article id="content">Načítám obsah...</article>
+  </main>
+  <script>
+    fetch('phase-ii-curated.md')
+      .then(response => response.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(error => {
+        document.getElementById('content').innerHTML = "Nepodařilo se načíst obsah: " + error;
+      });
+  </script>
+</body>
+</html>
